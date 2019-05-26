@@ -187,9 +187,13 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
- 
+            while (runningScore <= highestScore) {
+                runningScore += currentScore;
+                currentScore = gameNextScore();
+                 w = w + 1;
+            }
             // calling
-            w = w + 1;
+           
             // each time through the inner loop
         
         return w; // >= 3;
@@ -204,9 +208,13 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-
+            do{
+                runningScore += currentScore;
+                currentScore = gameNextScore();
+                 w = w + 1;
+            } while(runningScore <= highestScore);
             // calling
-            w = w + 1;
+                
             // each time through the inner loop
 
         return w >= 3;
@@ -222,7 +230,15 @@ public class WriteLoops {
         
 
         // calling
-        w = w + 1;
+        while (serverIsRunning()) {
+            waitFor(5);
+            w = w + 1;
+        }
+        
+        if(!serverIsRunning()) {
+            sendEmergencyText("HELP!", adminPhoneNumber);
+        }
+        
         // each time through the inner loop
         
         return w;
@@ -233,10 +249,13 @@ public class WriteLoops {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
+        int i = 7;
 
-
+            while(i < 50) {
             // calling
             w = w + 1;
+            i += 7;
+        }
             // each time through the inner loop
         
         return w;
@@ -270,12 +289,15 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
-
- 
-            // calling
-            w = w + 1;
-            // each time through the inner loop
         
+        
+            for(int i =0; i < threes_array.length; i++) {
+                sumOfThrees = sumOfThrees + threes_array[i];
+            // calling
+                w = w + 1;
+            // each time through the inner loop
+            }
+
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -287,11 +309,15 @@ public class WriteLoops {
     public int rewriteFooAsWhile() {
         int w = 0;
         int sumOfThrees = 0;
+        int i = 0;
 
- 
+            while (i < threes_array.length) {
+                sumOfThrees = sumOfThrees + threes_array[i];
             // calling
-            w = w + 1;
+                w = w + 1;
+                i++;
             // each time through the inner loop
+        }
         
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
@@ -309,6 +335,7 @@ public class WriteLoops {
     public int manageYardAndJunior() {
         int w = 0;
         boolean onTime = true;
+        boolean yardNeedsMowed = true;
 
         // ADD YOUR CODE here.
  
