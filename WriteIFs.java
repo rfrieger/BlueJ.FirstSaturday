@@ -22,6 +22,11 @@ public class WriteIFs
         // Write an IF statement that checks the 
         // “temperature(room)” and if that check is less than 70, 
         // calls “heatOn()” else calls “coolOn()”
+        int roomTemp = tempurature(room);
+        
+        if(roomTemp < 70) {
+            heatOn();
+        }
 
 
         
@@ -33,6 +38,10 @@ public class WriteIFs
         // “outsideTemp()” is less than 50 
         // AND 
         // “insideTemp()” is less than 62, 
+        
+        if (outsideTemp() < 50 && insideTemp() <62) {
+            startFire(fireplace1)
+        }
         // calls “startAFire(fireplace1)”
 
     }
