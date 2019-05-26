@@ -270,6 +270,7 @@ public class WriteLoops {
         int w = 0;
         // this is an array of ints. it is of length 7 (from 0 -> 6)
         int sumOfThrees = 0;
+        
 
         // this is a so called Enhanced for loop
         for (int index : threes_array) {

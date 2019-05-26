@@ -126,7 +126,47 @@ public class WriteLoopsTest
     }
 
     
+
+    @Test
+    public void loop50By7Test()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.loop50by7());
+    }
+
+    @Test
+    public void rewriteFooAsForTest()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsFor());
+    }
+
+    @Test
+    public void rewriteFooAsWhileTest()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsWhile());
+    }
+
+    @Test
+    public void ManageYardAndjuniorTest()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(0, writeLoo1.manageYardAndJunior());
+    }
+
+    @Test
+    public void tallyVote1()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote1());
+    }
 }
+
+
+
+
+
 
 
 
