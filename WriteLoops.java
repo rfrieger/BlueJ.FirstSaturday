@@ -103,7 +103,13 @@ public class WriteLoops {
         // Write a nested FOR loop(s), where one counts from
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
-                w = w + 1;
+                for(int i = 0; i < 20; i++) {
+                    for(int j = 0; j <= 4; j++) {
+                        w = w + 1;
+                        System.out.println(w);
+            }
+                System.out.println("====" + i);
+            }
                 // each time through the inner loop
 
         return w;
@@ -118,7 +124,13 @@ public class WriteLoops {
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+                for(int i = 5; i <= 105; i++) {
+                    if(i >51) {
+                        System.out.println("Hello ZipCode");
+                    } else{
+                       w = w + 1 ;
+                    }
+            }
             // each time through the inner loop
         
         return w;
@@ -150,10 +162,14 @@ public class WriteLoops {
 
         // you need to use a .equals for two Strings.
 
+            while(!gpsCurrentLocation().equals("Home")) {
+                driveSomeMore();
+                w = w + 1;
+            }
             // calling
-            w = w + 1;
+            
             // each time through the inner loop
-        
+            System.out.println("Honey, I’m Home!");
 
             return w;
     }
