@@ -193,7 +193,7 @@ public class WriteLoops {
                  w = w + 1;
             }
             // calling
-           
+                w = w + 1;
             // each time through the inner loop
         
         return w; // >= 3;
@@ -209,12 +209,13 @@ public class WriteLoops {
 
         // do your while loop here
             do{
+                
                 runningScore += currentScore;
                 currentScore = gameNextScore();
                  w = w + 1;
             } while(runningScore <= highestScore);
             // calling
-                
+                w = w + 1;
             // each time through the inner loop
 
         return w >= 3;
@@ -272,7 +273,7 @@ public class WriteLoops {
 
         // this is a so called Enhanced for loop
         for (int index : threes_array) {
-            sumOfThrees = sumOfThrees + threes_array[index];
+            sumOfThrees = sumOfThrees + threes_array[index -1];
             // calling
             w = w + 1;
             // each time through the inner loop
@@ -338,10 +339,13 @@ public class WriteLoops {
         boolean yardNeedsMowed = true;
 
         // ADD YOUR CODE here.
- 
-            // be sure to call
-            w = w + 1;
-            // each time inside the loop
+            while(isSummer()) {
+                if (yardNeedsMowed) {
+                    yellAtJuniorToMowLawn();
+                    w = w + 1;
+                }
+            }
+            sendJuniorBackToSchool("First Day of School");
         
         return w;
     }
@@ -355,11 +359,11 @@ public class WriteLoops {
         int w = 0;
         int numberOfVotes = voteTallies.length;
 
- 
-            // calling
-            w = w + 1;
-            // each time through the inner loop
-        
+            for (int i = 0; i < voteTallies.length; i++) {
+                System.out.println(voteTallies[i]);
+                 w = w + 1;
+            }
+          
         return w;
     }
 
@@ -369,12 +373,12 @@ public class WriteLoops {
     public int tallyVote2() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
+        int idx = 0;
+            while(idx < numberOfVotes) {
+                System.out.println(voteTallies[idx]);
+                 w = w + 1;
+            }
 
-
-            // calling
-            w = w + 1;
-            // each time through the inner loop
-        
         return w;
     }
 
