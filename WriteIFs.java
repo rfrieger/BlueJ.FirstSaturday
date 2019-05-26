@@ -11,6 +11,10 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
+        boolean state = isAlive(player1); 
+        if(!state) {
+            displayGameOver(player1);
+        }
      
     }
     
@@ -47,16 +51,18 @@ public class WriteIFs
      * 
      * instance variables
      * / 
-   int x;
-   int tt_t;
-   int tt_s;
-   int oo1, oo2;
-   String ss;
+   
 
 
   /**
    * Constructor for objects of class WriteIFs
    */
+  
+  int x;
+   int tt_t;
+   int tt_s;
+   int oo1, oo2;
+   String ss;
   public WriteIFs()
   {
       // initialise instance variables
